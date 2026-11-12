@@ -1,0 +1,25 @@
+[project]
+name = "komap"
+version = "0.1.0"
+description = "KoMaP 2026 고탄성 Al 합금 OM 이미지 상 분할"
+requires-python = ">=3.12"
+dependencies = [
+  "numpy", "scipy", "pillow", "scikit-image", "scikit-learn", "pandas",
+  "torch", "torchvision", "segmentation-models-pytorch", "albumentations",
+  "tqdm", "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "matplotlib"]   # matplotlib: 삭마 그림(komap.experiments.ablation)
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["error"]

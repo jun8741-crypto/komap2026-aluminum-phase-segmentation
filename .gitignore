@@ -1,0 +1,40 @@
+# 데이터·대용량·환경
+data/
+.venv/
+analysis/out/*.csv
+# 운영 상태
+.omc/
+.DS_Store
+__pycache__/
+*.pyc
+# 실험 산출물(나중에 결정)
+runs/
+outputs/
+.superpowers/
+*.egg-info/
+
+# codex-flow 작업 산출물(설계·검증 문서와 codex 로그)
+.codex-flow/
+
+# 병렬 구현용 git worktree(학습 중인 작업 트리를 건드리지 않기 위해)
+.worktrees/
+dist/
+
+# 브라우저 자동화 로그
+.playwright-mcp/
+~$*
+
+# 공개 저장소에서 빼는 것(문서·데이터·가중치·AI 도구 설정)
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.zip
+*.npz
+analysis/out/
+.codex-flow/
+.gstack/
+.claude/
+.codex/
+CLAUDE.md
+AGENTS.md
